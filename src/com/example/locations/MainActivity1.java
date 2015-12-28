@@ -13,11 +13,11 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class MainActivity1 extends Activity {
 
 	LinearLayout newLocLinear, locLinearList, buttonsLinear, rootLinear;
 	TextView txtTitle;
-	View view,view1; 
+	View view,view1;
 
 	@SuppressWarnings("deprecation")
 	@Override
