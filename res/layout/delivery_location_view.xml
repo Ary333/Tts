@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RLTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="4dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_home"
+            android:gravity="center_vertical"
+            android:text="Delivery Location"
+            android:textColor="@color/title"
+            android:textSize="@dimen/title_size" />
+
+        <ImageView
+            android:id="@+id/iv_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:padding="10dp"
+            android:src="@drawable/user" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rr_add_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RLTitle"
+        android:layout_margin="5dp"
+        android:background="@drawable/edittext1" >
+
+        <TextView
+            android:id="@+id/tv_add_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/arrow_red_left"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="Add new delivery address"
+            android:textColor="#626262"
+            android:textSize="@dimen/medium_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sVMainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rr_add_address"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rrNewAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f3f3f3"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:id="@+id/RNewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff" >
+
+                    <ImageView
+                        android:id="@+id/iv_home1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="5dp"
+                        android:src="@drawable/back" />
+
+                    <TextView
+                        android:id="@+id/titleNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/iv_home1"
+                        android:gravity="center_vertical"
+                        android:text="Delivery Location"
+                        android:textColor="@color/title"
+                        android:textSize="@dimen/title_size" />
+
+                    <ImageView
+                        android:id="@+id/iv_people1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/user" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvHouseNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/RNewTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="@string/newhouseaddress"
+                    android:textColor="#626262"
+                    android:textSize="@dimen/medium_size" />
+
+                <EditText
+                    android:id="@+id/et_housenum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvHouseNo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edittext1"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:imeOptions="actionDone"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="#626262"
+                    android:textSize="14dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tvHouselandMark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_housenum"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:text="@string/newhouseaddressdetails"
+                    android:textColor="#626262"
+                    android:textSize="@dimen/medium_size" />
+
+                <TextView
+                    android:id="@+id/tvHouselandMark1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvHouselandMark"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="left"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:text="Landmark:"
+                    android:textColor="#7c7c7c"
+                    android:textSize="@dimen/medium_size" />
+
+                <EditText
+                    android:id="@+id/et_housedetials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvHouselandMark1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edittext1"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="@string/newhouseaddressdetails1"
+                    android:imeOptions="actionDone"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="#626262"
+                    android:textSize="14dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/loctext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_housedetials"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittextlocation"
+                    android:drawableLeft="@drawable/location"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="Bhasheerbagh, Hyderabad, Telangana"
+                    android:textColor="@color/dark_hash"
+                    android:textSize="@dimen/medium_size" />
+
+                <TextView
+                    android:id="@+id/tvDeliveradd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/loctext"
+                    android:layout_margin="10dp"
+                    android:background="@color/red_color"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="10dp"
+                    android:text="Deliver to this address"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/title_size" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rrDynamicData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext1"
+                android:orientation="vertical"
+                android:visibility="visible" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height=".5dp"
+            android:background="@color/light_hash" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/toplayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout android:id="@+id/homelayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_search"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/iv_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/back" />
+
+                    <TextView
+                        android:id="@+id/tv_headrname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="New Address "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/title" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="@null"
+                    android:padding="10dp"
+                    android:src="@drawable/user" />
+            </RelativeLayout>
+
+            <!-- <include layout="@layout/of_listrow" /> -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height=".5dp"
+                android:background="@color/light_hash" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/delloc_txt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:text="Flat/House No, Floor, Building"
+                    android:textColor="@color/dark_hash"
+                    android:textSize="@dimen/small_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/holo_greybgd"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <EditText
+                        android:id="@+id/dellocEdt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/white"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/dark_hash"
+                        android:textSize="@dimen/medium_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/delloc_addtxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:text="Additional Address Details"
+                    android:textColor="@color/dark_hash"
+                    android:textSize="@dimen/small_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/landmark_txt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:text="Landmark : "
+                    android:textColor="@color/light_hash"
+                    android:textSize="@dimen/small_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/holo_greybgd"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <EditText
+                        android:id="@+id/dellocAddEdt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/white"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="E.g. Near AIIMS Flyover, Behind Regal Cinema, etc."
+                        android:singleLine="true"
+                        android:textColor="@color/dark_hash"
+                        android:textColorHint="@color/light_hash"
+                        android:textSize="@dimen/medium_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/holo_greybgd"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/delloc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="#dedede"
+                        android:drawableLeft="@drawable/home_location_icn"
+                        android:drawablePadding="10dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:text="Basheerbagh, Hyderabad, Telangana"
+                        android:textColor="@color/dark_hash"
+                        android:textColorHint="@color/light_hash"
+                        android:textSize="@dimen/medium_size" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/delivery_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/red_bg"
+                    android:padding="15dp"
+                    android:text="Delivery to this address"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/big_size"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
