@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
 
 	LinearLayout newLocLinear, locLinearList, buttonsLinear, rootLinear;
 	TextView txtTitle;
-	View view,view1; 
+	View view;
 
 	@SuppressWarnings("deprecation")
 	@Override
